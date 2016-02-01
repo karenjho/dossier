@@ -1,0 +1,12 @@
+<% if @user.errors.any? %>
+  <div class="errors">
+    <p>
+      <%= pluralize(@user.errors.count, "error") %> prevented this user from being signed up.
+    </p>
+    <ul>
+      <% @user.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
