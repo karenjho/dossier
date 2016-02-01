@@ -1,4 +1,7 @@
 <%= form_for @post do |f| %>
+
+  <%= render "errors" %>
+  
   <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
